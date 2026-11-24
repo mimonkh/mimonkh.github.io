@@ -18,7 +18,7 @@ window.PORTFOLIO = {
     phone: "+963 993 552 535",
     whatsapp: "963993552535",
     github: "https://github.com/mimonkh",
-    linkedin: "", // ← add your LinkedIn URL here and it will appear automatically
+    linkedin: "https://www.linkedin.com/in/miemon-khateeb-444454257",
     cv: "assets/cv/Miemon-Khateeb-CV.pdf" // ← to update the CV, replace this file (same name)
   },
 
@@ -69,17 +69,17 @@ window.PORTFOLIO = {
       role: { en: "Backend Developer", ar: "مطوّر باك إند" },
       company: "Space Craft",
       place: { en: "Erbil, Iraq · Remote", ar: "أربيل، العراق · عن بُعد" },
-      period: { en: "Oct 2025 — Present", ar: "تشرين الأول 2025 — حتى الآن" },
+      period: { en: "Oct 2025 — Nov 2026", ar: "تشرين الأول 2025 — تشرين الثاني 2026" },
       points: {
         en: [
-          "Building a full Hospital Information System (HIS) in Go and PostgreSQL on the FHIR healthcare data standard.",
-          "Building backend services that power the company’s mobile apps.",
-          "Full-stack Laravel development for web dashboards and APIs."
+          "Built a full Hospital Information System (HIS) for an international hospital in Go and PostgreSQL, on the FHIR healthcare data standard.",
+          "Built WePadel and Sahati: Laravel APIs and web dashboards on PostgreSQL powering their Flutter apps on Google Play.",
+          "Built backend services for the company’s mobile applications."
         ],
         ar: [
-          "بناء نظام معلومات مستشفى (HIS) متكامل باستخدام Go وPostgreSQL ومعيار FHIR للبيانات الصحية.",
-          "بناء خدمات الباك إند التي تشغّل تطبيقات الموبايل الخاصة بالشركة.",
-          "تطوير فول ستاك باستخدام Laravel للوحات التحكم والواجهات البرمجية."
+          "بناء نظام معلومات مستشفى (HIS) متكامل لمستشفى دولي باستخدام Go وPostgreSQL ومعيار FHIR للبيانات الصحية.",
+          "بناء WePadel وصحتي: واجهات Laravel ولوحات تحكم ويب على PostgreSQL تشغّل تطبيقاتهما المنشورة على Google Play.",
+          "بناء خدمات الباك إند لتطبيقات الموبايل الخاصة بالشركة."
         ]
       }
     },
@@ -87,7 +87,7 @@ window.PORTFOLIO = {
       role: { en: "Full-Stack Developer", ar: "مطوّر فول ستاك" },
       company: { en: "Freelance", ar: "عمل حر" },
       place: { en: "Remote", ar: "عن بُعد" },
-      period: { en: "2024", ar: "2024" }, // ← add an end date, e.g. "2024 — 2025"
+      period: { en: "2023 — 2024", ar: "2023 — 2024" },
       points: {
         en: ["Delivered complete products end to end: Flutter mobile apps, Laravel backends and admin dashboards on PostgreSQL or MySQL."],
         ar: ["تسليم منتجات كاملة من البداية للنهاية: تطبيقات Flutter، وباك إند Laravel، ولوحات تحكم إدارية مع PostgreSQL أو MySQL."]
@@ -97,7 +97,7 @@ window.PORTFOLIO = {
       role: { en: "Backend Developer", ar: "مطوّر باك إند" },
       company: "S-apps",
       place: { en: "Damascus, Syria", ar: "دمشق، سوريا" },
-      period: { en: "Feb 2022", ar: "شباط 2022" }, // ← add an end date
+      period: { en: "Feb 2022 — Nov 2026", ar: "شباط 2022 — تشرين الثاني 2026" },
       points: {
         en: [
           "Designed and built REST APIs with Node.js, Fastify, Prisma and PostgreSQL for products including SWIN, iShow, Ginco Construction and Al-Ajami.",
@@ -316,7 +316,7 @@ window.PORTFOLIO = {
   certifications: [
     { title: { en: "CCNA Routing & Switching (course)", ar: "CCNA Routing & Switching (دورة)" }, org: "Udemy" },
     { title: { en: "Information Security", ar: "أمن المعلومات" }, org: "UNDP" },
-    { title: { en: "Database Administration", ar: "إدارة قواعد البيانات" }, org: "Oracle" }
+    { title: { en: "Oracle Database Administration (course)", ar: "إدارة قواعد بيانات Oracle (دورة)" }, org: { en: "In-house training", ar: "تدريب داخلي" } }
   ],
   languages: [
     { name: { en: "Arabic", ar: "العربية" }, level: { en: "Native", ar: "اللغة الأم" } },
@@ -346,7 +346,7 @@ window.PORTFOLIO = {
     personalWork: { en: "Personal products", ar: "منتجات خاصة" },
     personalNote: { en: "Source available on request", ar: "الكود متاح عند الطلب" },
     privateSystem: { en: "Private system", ar: "نظام خاص" },
-    featured: { en: "Current work", ar: "العمل الحالي" },
+    featured: { en: "Featured", ar: "أبرز مشروع" },
     noMatch: { en: "No projects with this technology in this group.", ar: "لا توجد مشاريع بهذه التقنية ضمن هذه المجموعة." },
     link: {
       web: { en: "Website", ar: "الموقع" },
