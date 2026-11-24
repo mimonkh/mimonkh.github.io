@@ -14,7 +14,6 @@ window.PORTFOLIO = {
       ar: "أبني واجهات برمجية (APIs) وقواعد بيانات موثوقة وسيرفرات لينكس التي تعمل عليها، ثم أُطلق فوقها لوحات تحكم ويب وتطبيقات Flutter. أكثر من 5 سنوات في تسليم أنظمة إنتاجية لعملاء في سوريا والعراق والإمارات."
     },
     location: { en: "Damascus, Syria · works remotely", ar: "دمشق، سوريا · أعمل عن بُعد" },
-    photo: "assets/img/profile.jpg",
     email: "mimonkh544@gmail.com",
     phone: "+963 993 552 535",
     whatsapp: "963993552535",
@@ -29,8 +28,8 @@ window.PORTFOLIO = {
   stats: [
     { value: "5+", label: { en: "years of experience", ar: "سنوات خبرة" } },
     { value: "15+", label: { en: "production projects", ar: "مشروع في الإنتاج" } },
-    { value: "4", label: { en: "live apps on Google Play", ar: "تطبيقات منشورة على Google Play" } },
-    { value: "3", label: { en: "countries served", ar: "دول خدمت عملاء فيها" } }
+    { value: "5+", label: { en: "live apps & platforms", ar: "تطبيقات ومنصات تعمل حالياً" } },
+    { value: "3+", label: { en: "countries served", ar: "دول خدمت عملاء فيها" } }
   ],
 
   // level: 3 = expert, 2 = strong, 1 = background
@@ -234,7 +233,8 @@ window.PORTFOLIO = {
 
   alsoWorkedOn: {
     title: { en: "Also delivered", ar: "مشاريع أخرى سلّمتها" },
-    items: ["ComCamp", "Goaluck", "CrowdFunding", "Al-Ajami", "Shifacom", "Foryou-Market", "WARSHA"]
+    items: ["ComCamp", "Goaluck", "CrowdFunding", "Al-Ajami", "Shifacom", "Foryou-Market", "WARSHA"],
+    more: { en: "and more", ar: "وغيرها" }
   },
 
   personalProjects: [

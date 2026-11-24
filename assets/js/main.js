@@ -97,16 +97,17 @@
         "</div>" +
       "</div>" +
       '<div class="hero__visual">' +
-        '<figure class="portrait"><img src="' + esc(p.photo) + '" alt="' + esc(t(p.name)) + '" width="560" height="700"></figure>' +
         '<div class="codecard" dir="ltr" aria-hidden="true">' +
           '<div class="codecard__bar"><i></i><i></i><i></i><span>stack.ts</span></div>' +
           "<pre><code>" +
             '<span class="k">export const</span> stack = {\n' +
             '  api:  [<span class="s">"Node.js"</span>, <span class="s">"Laravel"</span>, <span class="s">"Go"</span>],\n' +
-            '  db:   [<span class="s">"PostgreSQL"</span>, <span class="s">"MySQL"</span>],\n' +
-            '  ops:  [<span class="s">"Linux"</span>, <span class="s">"Docker"</span>, <span class="s">"Nginx"</span>],\n' +
+            '  db:   [<span class="s">"PostgreSQL"</span>, <span class="s">"MySQL"</span>, <span class="s">"MongoDB"</span>],\n' +
+            '  ops:  [<span class="s">"Linux"</span>, <span class="s">"Docker"</span>, <span class="s">"Nginx"</span>, <span class="s">"Redis"</span>],\n' +
             '  apps: [<span class="s">"Flutter"</span>, <span class="s">"React"</span>],\n' +
-            "};" +
+            "};\n\n" +
+            '<span class="k">await</span> <span class="f">deploy</span>(stack);\n' +
+            '<span class="c">// ✓ running in production</span>' +
           "</code></pre>" +
         "</div>" +
       "</div>";
@@ -170,8 +171,7 @@
     var body = shown.length
       ? '<div class="grid">' + shown.map(projectCard).join("") + "</div>"
       : '<p class="empty">' + esc(t(D.ui.noMatch)) + "</p>";
-    return '<div class="pgroup"><div class="pgroup__head"><h3>' + esc(t(title)) +
-      ' <span class="count">' + shown.length + "</span></h3>" +
+    return '<div class="pgroup"><div class="pgroup__head"><h3>' + esc(t(title)) + "</h3>" +
       (note ? '<span class="pgroup__note">' + note + "</span>" : "") + "</div>" + body + "</div>";
   }
 
@@ -180,7 +180,7 @@
       return '<button type="button" class="filter" data-filter="' + f.key + '" aria-pressed="' + (state.filter === f.key) + '">' + esc(t(f.label)) + "</button>";
     }).join("");
     var also = state.filter === "all"
-      ? '<p class="also"><span>' + esc(t(D.alsoWorkedOn.title)) + ":</span> " + D.alsoWorkedOn.items.map(esc).join(" · ") + "</p>"
+      ? '<p class="also"><span>' + esc(t(D.alsoWorkedOn.title)) + ":</span> " + D.alsoWorkedOn.items.map(esc).join(" · ") + " · " + esc(t(D.alsoWorkedOn.more)) + "</p>"
       : "";
     var note = esc(t(D.ui.personalNote));
     $("#projects").innerHTML = sectionHead("03", D.ui.projectsTitle, D.ui.projectsSub) +
