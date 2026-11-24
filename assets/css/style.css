@@ -106,22 +106,6 @@ svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; s
 .btn--ghost { background: var(--surface); border-color: var(--border); color: var(--text); }
 .btn--ghost:hover { border-color: var(--faint); }
 [dir="rtl"] .btn svg:last-child:not(:first-child) { transform: scaleX(-1); }
-[dir="rtl"] .dropdown summary svg:last-child { transform: none; }
-
-.dropdown { position: relative; }
-.dropdown summary { list-style: none; }
-.dropdown summary::-webkit-details-marker { display: none; }
-.dropdown summary svg:last-child { width: 16px; height: 16px; transition: transform .2s; }
-.dropdown[open] summary svg:last-child { transform: rotate(180deg); }
-.dropdown__menu {
-  position: absolute; top: calc(100% + 8px); inset-inline-start: 0; z-index: 20; min-width: 100%;
-  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 6px;
-  box-shadow: var(--shadow); display: grid; gap: 2px;
-}
-.dropdown--up .dropdown__menu { top: auto; bottom: calc(100% + 8px); }
-.dropdown__menu a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; white-space: nowrap; }
-.dropdown__menu a:hover { background: var(--surface-2); }
-.dropdown__menu svg { color: var(--accent); }
 
 /* ── hero ───────────────────────────────────────────────── */
 .hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 48px; }
@@ -322,9 +306,7 @@ a.plink:hover { border-color: var(--accent); color: var(--accent); }
   .hero { padding-top: 36px; }
   .section { padding-top: 64px; }
   .brand__name { display: none; }
-  .hero__cta .btn, .hero__cta .dropdown { flex: 1 1 auto; }
-  .hero__cta .dropdown summary { width: 100%; justify-content: center; }
-  .hero__cta > .btn { justify-content: center; }
+  .hero__cta .btn { flex: 1 1 auto; justify-content: center; }
   .contact { padding: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {

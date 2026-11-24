@@ -27,7 +27,6 @@
     pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
     download: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>',
     arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>',
-    chevron: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
     web: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19Z"/></svg>',
     dashboard: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="9" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="5" rx="1.5"/><rect x="13.5" y="11" width="7.5" height="10" rx="1.5"/><rect x="3" y="15" width="7.5" height="6" rx="1.5"/></svg>',
     play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.8v16.4a1 1 0 0 0 1.5.86l13.6-8.2a1 1 0 0 0 0-1.72L7.5 2.94A1 1 0 0 0 6 3.8Z"/></svg>',
@@ -45,13 +44,8 @@
       "</header>";
   }
 
-  function cvMenu(extraClass) {
-    var items = D.profile.cv.map(function (c) {
-      return '<a href="' + esc(c.href) + '" download>' + ICON.download + "<span>" + esc(t(c.label)) + "</span></a>";
-    }).join("");
-    return '<details class="dropdown ' + (extraClass || "") + '">' +
-      '<summary class="btn btn--ghost">' + ICON.download + "<span>" + esc(t(D.ui.downloadCv)) + "</span>" + ICON.chevron + "</summary>" +
-      '<div class="dropdown__menu">' + items + "</div></details>";
+  function cvButton() {
+    return '<a class="btn btn--ghost" href="' + esc(D.profile.cv) + '" download>' + ICON.download + "<span>" + esc(t(D.ui.downloadCv)) + "</span></a>";
   }
 
   function socials() {
@@ -89,7 +83,7 @@
         '<p class="hero__lead">' + esc(t(p.lead)) + "</p>" +
         '<div class="hero__cta">' +
           '<a class="btn btn--primary" href="#projects"><span>' + esc(t(D.ui.viewWork)) + "</span>" + ICON.arrow + "</a>" +
-          cvMenu() +
+          cvButton() +
         "</div>" +
         '<div class="hero__meta">' +
           '<span class="meta">' + ICON.pin + esc(t(p.location)) + "</span>" +
@@ -214,7 +208,7 @@
           '<div class="hero__cta">' +
             '<a class="btn btn--primary" href="mailto:' + esc(p.email) + '">' + ICON.mail + "<span>" + esc(t(D.ui.emailMe)) + "</span></a>" +
             '<a class="btn btn--ghost" href="https://wa.me/' + esc(p.whatsapp) + '" target="_blank" rel="noopener">' + ICON.chat + "<span>" + esc(t(D.ui.whatsapp)) + "</span></a>" +
-            cvMenu("dropdown--up") +
+            cvButton() +
           "</div>" +
         "</div>" +
         '<ul class="contact__list">' +
@@ -255,13 +249,6 @@
         setTimeout(function () { c.classList.remove("is-done"); c.setAttribute("aria-label", t(D.ui.copy)); }, 1600);
       });
     }
-    document.querySelectorAll("details.dropdown[open]").forEach(function (d) {
-      if (!d.contains(e.target)) d.removeAttribute("open");
-    });
-  });
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") document.querySelectorAll("details.dropdown[open]").forEach(function (d) { d.removeAttribute("open"); });
   });
 
   $("#langBtn").addEventListener("click", function () {

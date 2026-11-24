@@ -19,10 +19,7 @@ window.PORTFOLIO = {
     whatsapp: "963993552535",
     github: "https://github.com/mimonkh",
     linkedin: "", // ← add your LinkedIn URL here and it will appear automatically
-    cv: [
-      { label: { en: "Backend CV", ar: "سيرة ذاتية — باك إند" }, href: "assets/cv/Miemon-Khateeb-Backend-CV.pdf" },
-      { label: { en: "Full-Stack CV", ar: "سيرة ذاتية — فول ستاك" }, href: "assets/cv/Miemon-Khateeb-FullStack-CV.pdf" }
-    ]
+    cv: "assets/cv/Miemon-Khateeb-CV.pdf" // ← to update the CV, replace this file (same name)
   },
 
   stats: [
