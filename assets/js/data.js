@@ -13,10 +13,20 @@ window.PORTFOLIO = {
       en: "I build reliable APIs, databases and the Linux servers they run on — then ship the web dashboards and Flutter apps on top of them. 5+ years delivering production systems for clients in Syria, Iraq and the UAE.",
       ar: "أبني واجهات برمجية (APIs) وقواعد بيانات موثوقة وسيرفرات لينكس التي تعمل عليها، ثم أُطلق فوقها لوحات تحكم ويب وتطبيقات Flutter. أكثر من 5 سنوات في تسليم أنظمة إنتاجية لعملاء في سوريا والعراق والإمارات."
     },
+    about: {
+      en: [
+        "I’m a full-stack engineer based in Damascus, working remotely with teams in Iraq and the UAE. My core is the backend: designing APIs and PostgreSQL / MySQL schemas, securing them, and running them on Linux servers.",
+        "I take products all the way to the screen with React or Laravel dashboards and Flutter apps, and I care most about clean data models, fast queries and systems that keep running long after launch."
+      ],
+      ar: [
+        "مهندس فول ستاك مقيم في دمشق، أعمل عن بُعد مع فرق في العراق والإمارات. تخصصي الأساسي هو الباك إند: تصميم الواجهات البرمجية ومخططات قواعد بيانات PostgreSQL وMySQL، وتأمينها، وتشغيلها على سيرفرات لينكس.",
+        "أوصل بالمنتج حتى الشاشة عبر لوحات تحكم React أو Laravel وتطبيقات Flutter، وأهتم أكثر شيء بنماذج بيانات نظيفة، واستعلامات سريعة، وأنظمة تبقى شغّالة بعد الإطلاق بوقت طويل."
+      ]
+    },
     location: { en: "Damascus, Syria · works remotely", ar: "دمشق، سوريا · أعمل عن بُعد" },
     email: "mimonkh544@gmail.com",
-    phone: "+963 993 552 535",
-    whatsapp: "963993552535",
+    phone: "+963 989 117 104",    // mobile number (shown + used for the "Call" link)
+    whatsapp: "+963 989 117 104", // WhatsApp number (write it any readable way; the link uses the digits only)
     github: "https://github.com/mimonkh",
     linkedin: "https://www.linkedin.com/in/miemon-khateeb-444454257",
     cv: "assets/cv/Miemon-Khateeb-CV.pdf" // ← to update the CV, replace this file (same name)
@@ -327,6 +337,7 @@ window.PORTFOLIO = {
   // interface labels
   ui: {
     nav: {
+      about: { en: "About", ar: "نبذة" },
       skills: { en: "Skills", ar: "المهارات" },
       experience: { en: "Experience", ar: "الخبرات" },
       projects: { en: "Projects", ar: "المشاريع" },
@@ -335,6 +346,20 @@ window.PORTFOLIO = {
     },
     viewWork: { en: "View my work", ar: "شاهد أعمالي" },
     downloadCv: { en: "Download CV", ar: "تحميل السيرة الذاتية" },
+    aboutTitle: { en: "About me", ar: "نبذة عني" },
+    profileCard: { en: "Profile", ar: "الملف الشخصي" },
+    field: {
+      name: { en: "Name", ar: "الاسم" },
+      role: { en: "Role", ar: "المسمى" },
+      location: { en: "Location", ar: "الموقع" },
+      mobile: { en: "Mobile", ar: "الموبايل" },
+      whatsapp: { en: "WhatsApp", ar: "واتساب" },
+      email: { en: "Email", ar: "الإيميل" },
+      linkedin: { en: "LinkedIn", ar: "LinkedIn" },
+      github: { en: "GitHub", ar: "GitHub" },
+      languages: { en: "Languages", ar: "اللغات" }
+    },
+    call: { en: "Call", ar: "اتصال" },
     skillsTitle: { en: "What I work with", ar: "التقنيات التي أعمل بها" },
     skillsSub: { en: "Backend first — with enough front end and mobile to ship the whole product.", ar: "الباك إند أولاً — مع ما يكفي من الواجهات والموبايل لتسليم المنتج كاملاً." },
     alsoUse: { en: "Also in my toolbox", ar: "أدوات أخرى أستخدمها" },
