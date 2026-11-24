@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miemon Khateeb — Backend & Full-Stack Engineer</title>
+  <meta name="description" content="Backend & full-stack engineer: Node.js, Laravel, Go, PostgreSQL, MySQL, Linux servers and Flutter. 5+ years of production systems for clients in Syria, Iraq and the UAE.">
+  <meta name="author" content="Miemon Khateeb">
+  <meta name="theme-color" content="#0a0f15">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Miemon Khateeb — Backend & Full-Stack Engineer">
+  <meta property="og:description" content="Node.js · Laravel · Go · PostgreSQL · Linux servers · Flutter. Projects, experience and CV.">
+  <meta property="og:url" content="https://mimonkh.github.io/">
+  <meta property="og:image" content="https://mimonkh.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    /* apply saved theme/language before paint to avoid a flash */
+    (function () {
+      var q = new URLSearchParams(location.search), s = {};
+      try { s.theme = localStorage.getItem("theme"); s.lang = localStorage.getItem("lang"); } catch (e) {}
+      var theme = q.get("theme") || s.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      var lang = q.get("lang") || s.lang || "en";
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.lang = lang === "ar" ? "ar" : "en";
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Home"><span class="brand__mark">MK</span><span class="brand__name" data-bind="name"></span></a>
+      <nav class="nav" aria-label="Sections" id="nav"></nav>
+      <div class="topbar__actions">
+        <button class="iconbtn" id="langBtn" type="button"></button>
+        <button class="iconbtn iconbtn--square" id="themeBtn" type="button"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top"></section>
+    <section class="stats wrap" id="stats" aria-label="Highlights"></section>
+    <section class="section wrap reveal" id="skills"></section>
+    <section class="section wrap reveal" id="experience"></section>
+    <section class="section wrap reveal" id="projects"></section>
+    <section class="section wrap reveal" id="background"></section>
+    <section class="section wrap reveal" id="contact"></section>
+  </main>
+
+  <footer class="footer wrap" id="footer"></footer>
+
+  <noscript>
+    <div class="wrap" style="padding:2rem 0">
+      <h1>Miemon Khateeb — Backend &amp; Full-Stack Engineer</h1>
+      <p>Node.js, Laravel, Go, PostgreSQL, MySQL, MongoDB, Linux servers, Flutter.</p>
+      <p>Email: <a href="mailto:mimonkh544@gmail.com">mimonkh544@gmail.com</a> · <a href="https://github.com/mimonkh">GitHub</a> ·
+        <a href="assets/cv/Miemon-Khateeb-Backend-CV.pdf">Backend CV</a> · <a href="assets/cv/Miemon-Khateeb-FullStack-CV.pdf">Full-Stack CV</a></p>
+    </div>
+  </noscript>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
