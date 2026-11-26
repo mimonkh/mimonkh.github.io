@@ -28,7 +28,7 @@ window.PORTFOLIO = {
     phone: "+963 989 117 104",    // mobile number (shown + used for the "Call" link)
     whatsapp: "+963 989 117 104", // WhatsApp number (write it any readable way; the link uses the digits only)
     github: "https://github.com/mimonkh",
-    linkedin: "www.linkedin.com/in/miemon-khateeb",
+    linkedin: "https://www.linkedin.com/in/miemon-khateeb",
     cv: "assets/cv/Miemon-Khateeb-CV.pdf" // ← to update the CV, replace this file (same name)
   },
 

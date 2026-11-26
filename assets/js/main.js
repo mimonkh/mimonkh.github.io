@@ -23,6 +23,8 @@
   function telHref(n) { return "tel:+" + digits(n); }
   function waHref(n) { return "https://wa.me/" + digits(n); }
   function bare(url) { return String(url).replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""); }
+  /* accept links written without https:// (e.g. "www.linkedin.com/in/...") */
+  function abs(url) { url = String(url).trim(); return /^https?:\/\//i.test(url) ? url : "https://" + url.replace(/^\/+/, ""); }
 
   var ICON = {
     github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>',
@@ -53,13 +55,16 @@
   }
 
   function cvButton() {
-    return '<a class="btn btn--ghost" href="' + esc(D.profile.cv) + '" download>' + ICON.download + "<span>" + esc(t(D.ui.downloadCv)) + "</span></a>";
+    /* "?v=" + time makes browsers fetch the newest CV instead of an old cached copy */
+    var href = D.profile.cv + "?v=" + Date.now();
+    var name = D.profile.cv.split("/").pop();
+    return '<a class="btn btn--ghost" href="' + esc(href) + '" download="' + esc(name) + '">' + ICON.download + "<span>" + esc(t(D.ui.downloadCv)) + "</span></a>";
   }
 
   function socials() {
     var p = D.profile, out = [];
-    out.push('<a class="social" href="' + esc(p.github) + '" target="_blank" rel="noopener" aria-label="GitHub">' + ICON.github + "</a>");
-    if (p.linkedin) out.push('<a class="social" href="' + esc(p.linkedin) + '" target="_blank" rel="noopener" aria-label="LinkedIn">' + ICON.linkedin + "</a>");
+    out.push('<a class="social" href="' + esc(abs(p.github)) + '" target="_blank" rel="noopener" aria-label="GitHub">' + ICON.github + "</a>");
+    if (p.linkedin) out.push('<a class="social" href="' + esc(abs(p.linkedin)) + '" target="_blank" rel="noopener" aria-label="LinkedIn">' + ICON.linkedin + "</a>");
     out.push('<a class="social" href="mailto:' + esc(p.email) + '" aria-label="Email">' + ICON.mail + "</a>");
     out.push('<a class="social" href="' + waHref(p.whatsapp) + '" target="_blank" rel="noopener" aria-label="WhatsApp">' + ICON.whatsapp + "</a>");
     return out.join("");
@@ -216,8 +221,8 @@
       ["whatsapp", f.whatsapp, ext(waHref(p.whatsapp), p.whatsapp)],
       ["mail", f.email, '<a href="mailto:' + esc(p.email) + '" dir="ltr">' + esc(p.email) + "</a>" +
         '<button type="button" class="copy" data-copy="' + esc(p.email) + '" aria-label="' + esc(t(D.ui.copy)) + '">' + ICON.copy + "</button>"],
-      p.linkedin ? ["linkedin", f.linkedin, ext(p.linkedin, bare(p.linkedin))] : null,
-      ["github", f.github, ext(p.github, bare(p.github))],
+      p.linkedin ? ["linkedin", f.linkedin, ext(abs(p.linkedin), bare(p.linkedin))] : null,
+      ["github", f.github, ext(abs(p.github), bare(p.github))],
       ["web", f.languages, esc(D.languages.map(function (l) { return t(l.name); }).join(" · "))]
     ].filter(Boolean);
     var list = rows.map(function (r) {
