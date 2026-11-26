@@ -76,19 +76,19 @@ window.PORTFOLIO = {
 
   experience: [
     {
-      role: { en: "Backend Developer", ar: "مطوّر باك إند" },
+      role: { en: "Full-Stack Developer", ar: "مطوّر فول ستاك" },
       company: "Space Craft",
       place: { en: "Erbil, Iraq · Remote", ar: "أربيل، العراق · عن بُعد" },
       period: { en: "Oct 2025 — Nov 2026", ar: "تشرين الأول 2025 — تشرين الثاني 2026" },
       points: {
         en: [
           "Built a full Hospital Information System (HIS) for an international hospital in Go and PostgreSQL, on the FHIR healthcare data standard.",
-          "Built WePadel and Sahati: Laravel APIs and web dashboards on PostgreSQL powering their Flutter apps on Google Play.",
+          "Built WePadel and Sahati as full-stack Laravel applications: APIs, admin web dashboards and PostgreSQL databases powering their Flutter apps on Google Play.",
           "Built backend services for the company’s mobile applications."
         ],
         ar: [
           "بناء نظام معلومات مستشفى (HIS) متكامل لمستشفى دولي باستخدام Go وPostgreSQL ومعيار FHIR للبيانات الصحية.",
-          "بناء WePadel وصحتي: واجهات Laravel ولوحات تحكم ويب على PostgreSQL تشغّل تطبيقاتهما المنشورة على Google Play.",
+          "بناء WePadel وصحتي كتطبيقات Laravel فول ستاك: واجهات برمجية ولوحات تحكم ويب وقواعد بيانات PostgreSQL تشغّل تطبيقاتهما المنشورة على Google Play.",
           "بناء خدمات الباك إند لتطبيقات الموبايل الخاصة بالشركة."
         ]
       }
